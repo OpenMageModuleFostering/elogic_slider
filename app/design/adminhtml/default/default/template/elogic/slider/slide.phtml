@@ -1,0 +1,58 @@
+<?php $slide = $this->getSlide()?>
+<li class="slide-template" id="slide-<?php echo $this->getUniqId()?>">
+    <div class="entry-edit">
+        <div class="entry-edit-head">
+            <h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('Slide template')?> <?php echo $this->getUniqId()?></h4>
+            <div class="form-buttons"></div>
+        </div>
+        <div class="fieldset">
+            <form method="post" class="edit_slider_form" action="" enctype="multipart/form-data">
+                <?php echo $this->getBlockHtml('formkey')?>
+
+                    <table cellspacing="0" class="form-list">
+                        <tbody>
+                            <tr>
+                                <td class="label">
+                                    <label for="name"><?php echo $this->__('Slide Title');?></label>
+                                </td>
+                                <td class="value">
+                                    <input type="text" name="title" value="<?php echo $slide ? $slide->getTitle() : ''?>">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label">
+                                    <label for="name"><?php echo $this->__('Image');?></label>
+                                </td>
+                                <td class="value">
+                                    <input type="file" name="image">
+                                    <br>
+                                    <div class="slide-image wrapper">
+                                        <img src="<?php echo $slide ? $slide->getImagePath() : ''?>" class="slide-image">
+                                        <div class="blocks">
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                <input type="hidden" name="uniqid" value="<?php echo $this->getUniqId()?>">
+                <input type="hidden" name="position" value="">
+            </form>
+            <div>
+                <form class="form-blocks" action="" method="get">
+                    <div class="block">
+                        <input type="hidden" name="x1" value="" />
+                        <input type="hidden" name="y1" value="" />
+                        <input type="hidden" name="width" value="" />
+                        <input type="hidden" name="height" value="" />
+                        <input type="text" name="product-link" value="" placeholder="<?php echo $this->__('Link')?>" />
+                        <input type="text" name="product-name" value="" placeholder="<?php echo $this->__('Name')?>" />
+                    </div>
+                    <button type="submit" name="submit"><?php echo $this->__('Add block')?></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</li>

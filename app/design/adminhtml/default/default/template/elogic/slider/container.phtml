@@ -1,0 +1,60 @@
+<?php $_slider = $this->getSlider() ?>
+<?php $slides = $this->getSlides()?>
+<?php echo $this->getFormInitScripts() ?>
+<div class="slider-container">
+    <div class="content-header">
+        <table cellspacing="0">
+            <tr>
+                <td>
+                    <h3 class="icon-head head-product-attribute-sets">
+                        <?php echo $this->escapeHtml($this->_getHeader()) ?>
+                    </h3>
+                </td>
+                <td class="form-buttons">
+                    <?php echo $this->getButtonsHtml('header') ?>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <table cellspacing="15" width="100%">
+        <tr>
+            <td class="form-cols" style="width:340px">
+                <?php echo $this->getContentFormHtml(); ?>
+            </td>
+            <td class="form-cols" style="width:180px">
+                <div class="content-header skip-header">
+                    <h3><?php echo Mage::helper('elogic_slider')->__('Slides') ?></h3>
+                    <button class="add-new-slide">
+                        <?php echo Mage::helper('elogic_slider')->__('Add slide') ?>
+                    </button>
+                </div>
+                <div>
+                    <ul class="slides-list sortable" id="slides-list">
+                        <?php foreach($slides as $slide):?>
+                            <?php echo $slide['row']?>
+                        <?php endforeach?>
+                    </ul>
+                </div>
+            </td>
+            <td>
+                <ul class="slides" id="slides">
+                    <?php foreach($slides as $slide):?>
+                        <?php echo $slide['html']?>
+                    <?php endforeach?>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</div>
+<?php $k = Mage::getSingleton('core/session')->getFormKey(); ?>
+<script type="text/javascript">
+    window.urls = window.urls || {};
+    window.urls.saveSlider = '<?php echo $this->getSaveSliderUrl();?>';
+    window.urls.addSlide = '<?php echo $this->getAddSlideUrl();?>';
+    window.urls.thumbnailImage = '<?php echo $this->getUploadThumbUrl();?>';
+    var sliderConfig = <?php echo $this->getJsonSliderConfig()?>;
+
+    var editForm = new varienForm('edit_slider_form', '<?php echo $this->getValidationUrl() ?>');
+
+</script>
+<?php echo $this->getFormScripts() ?>

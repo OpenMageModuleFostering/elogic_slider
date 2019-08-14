@@ -1,0 +1,94 @@
+.slider-container button.add-new-slide{
+    float: right;
+    background-image:url(../images/btn_gr_bg.gif);
+    border-color:#46745E;
+}
+.slider-container button.add-new-slide:hover { background:url(../images/btn_gr_over.gif) #6cac46; }
+.slider-container button.add-new-slide:active { background:url(../images/btn_gr_on.gif) repeat-x 0 0 #3fa05e; }
+.slider-container .form-list td.label{
+    width: 85px;
+}
+.slider-container .form-list td.label label{
+    width: 70px;
+}
+
+.slider-container .form-list td.value input.input-text,.slider-container .form-list td.value textarea{
+    width:206px;
+}
+.slider-container .form-list td.value select{
+    width:210px;
+    padding-right: 0;
+}
+.slider-container .slides-list li i.icon-move{
+    float: left;
+    background-image: url(../images/arrow_sort_move.gif);
+    width: 5px;
+    height: 11px;
+    margin: 5px;
+}
+.slider-container .slides-list li i.icon-delete{
+    float: right;
+    background-image: url(../images/cancel_btn_icon.gif);
+    width: 16px;
+    height: 16px;
+    font-size: 0;
+    cursor: pointer;
+}
+.slider-container .slides-list li{
+    cursor: pointer;
+    background-color: #ACFCAF;
+    padding: 2px 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.slider-container .slides-list li.active{
+    background-color: #ffbbbb;
+}
+.slider-container .slides li{
+    display: none;
+}
+.slider-container .slides li .slide-image img{
+    max-width: 100%;
+    width: 100%;
+}
+.image_container {
+    float: left;
+    margin-right: 50px;
+}
+.slider-container .wrapper {
+    position: relative;
+    min-width: inherit;
+}
+.slider-container .wrapper a {
+    opacity: 0;
+    position: absolute;
+    display: block;
+    background: rgba(255,255,255,.25);
+    transition: .5s;
+    border: 3px solid rgba(255,255,255,0);
+    color: rgba(255,255,255,.75);
+    text-shadow: 0 0 3px #333;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: sans-serif;
+    text-align: center;
+    vertical-align: bottom;
+}
+.slider-container .wrapper a > span {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.slider-container .wrapper:hover a {
+    transition: 1s;
+    opacity: 1;
+}
+.slider-container .wrapper:hover a:hover {
+    background: rgba(255,255,255,0);
+    border: 3px solid rgba(255,255,255,.5);
+    transition: .5s;
+}
+.slider-container .el_titles {
+    display: inline-block;
+}

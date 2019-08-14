@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Slider backend layout
+ * @author elogic
+ */
+-->
+
+<layout version="0.1.0">
+    <elogic_slider_adminhtml_slider_new>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>elogic/slider/js/plugins/jquery-1.7.2.min.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>elogic/slider/js/plugins/jquery-noconflict.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>elogic/slider/js/plugins/jquery-sortable.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>elogic/slider/js/plugins/jquery.imgareaselect.min.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>elogic/slider/js/plugins/jquery.form.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>elogic/slider/js/slider-form.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>elogic/slider/css/imgareaselect-default.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>elogic/slider/css/custom.css</name>
+            </action>
+        </reference>
+    </elogic_slider_adminhtml_slider_new>
+
+    <elogic_slider_adminhtml_slider_edit>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>elogic/slider/js/plugins/jquery-1.7.2.min.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>elogic/slider/js/plugins/jquery-noconflict.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>elogic/slider/js/plugins/jquery-sortable.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>elogic/slider/js/plugins/jquery.imgareaselect.min.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>elogic/slider/js/plugins/jquery.form.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>elogic/slider/js/slider-form.js</name>
+            </action>
+
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>elogic/slider/css/imgareaselect-default.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>elogic/slider/css/custom.css</name>
+            </action>
+        </reference>
+    </elogic_slider_adminhtml_slider_edit>
+</layout>

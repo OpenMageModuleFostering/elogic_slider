@@ -1,0 +1,43 @@
+<?php $slider = $this->getSlider(); ?>
+<?php $storeId = Mage::app()->getStore()->getStoreId(); ?>
+<?php if ($slider): ?>
+    <!--    Slider content -->
+    <?php if ($slidesCollection = $slider->getSlides()): ?>
+        <?php $i = 0; ?>
+        <div class="slide-image">
+            <div class="flexslider">
+                  
+                <ul class="slides">
+                    <?php foreach ($slidesCollection as $slide): ?>
+                        <?php $i++; ?>
+                        <li>
+                            <img
+                                src="<?php echo Mage::getBaseUrl('media') . 'elogic/slider/' . $slide->getSliderId() . '/' . $slide->getId() . '/' . $slide->getImage(); ?>"
+                                class="slide-image">
+                            <div class="blocks">
+                                <?php foreach ($slide->getParams() as $param) { ?>
+                                    <a class="el_beatles masterTooltip el_<?php echo $i ?>" href="<?php echo $param['url'] ?>" title="<?php echo $param['name'] ?>"
+                                       style="left: <?php echo $param['x1'] * 100 . '%' ?>; top: <?php echo $param['y1'] * 100 . '%' ?>; width: <?php echo $param['width'] * 100 . '%' ?>; height: <?php echo $param['height'] * 100 . '%' ?>">
+                                    </a>
+                                <?php } ?>
+                            </div>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        </div>
+    <?php endif ?>
+<?php endif ?>
+<script>
+    jQuery(document).ready(function ($) {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            pauseOnAction: true,
+            slideshowSpeed: <?php echo $this->speedSlider(); ?>,
+            after: function() {
+                var height = $(".slides li.flex-active-slide").height();
+                $('.flex-viewport').height(height)
+            }
+        });
+    });
+</script>

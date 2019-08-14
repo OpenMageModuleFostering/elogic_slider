@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Module configuration
+ *
+ * @author elogic
+ */
+-->
+<config>
+    <modules>
+        <Elogic_Slider>
+            <version>0.1.0</version>
+        </Elogic_Slider>
+    </modules>
+    <global>
+        <blocks>
+            <elogic_slider>
+                <class>Elogic_Slider_Block</class>
+            </elogic_slider>
+        </blocks>
+        <helpers>
+            <elogic_slider>
+                <class>Elogic_Slider_Helper</class>
+            </elogic_slider>
+        </helpers>
+        <models>
+            <elogic_slider>
+                <class>Elogic_Slider_Model</class>
+                <resourceModel>elogic_slider_resource</resourceModel>
+            </elogic_slider>
+            <elogic_slider_resource>
+                <class>Elogic_Slider_Model_Resource</class>
+                <entities>
+                    <slider>
+                        <table>elogic_slider</table>
+                    </slider>
+                    <slider_slides>
+                        <table>elogic_slider_slides</table>
+                    </slider_slides>
+                </entities>
+            </elogic_slider_resource>
+        </models>
+        <resources>
+            <elogic_slider_setup>
+                <setup>
+                    <module>Elogic_Slider</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </elogic_slider_setup>
+        </resources>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <elogic_slider module="Elogic_Slider">
+                    <file>elogic/slider.xml</file>
+                </elogic_slider>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+            <elogic_slider>
+                <use>admin</use>
+                <args>
+                    <module>Elogic_Slider</module>
+                    <frontName>elogic_slider</frontName>
+                </args>
+            </elogic_slider>
+        </routers>
+    </admin>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <elogic_slider translate="title" module="elogic_slider">
+                                            <title>Elogic</title>
+                                        </elogic_slider>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <layout>
+            <updates>
+                <elogic_slider module="Elogic_Slider">
+                    <file>elogic/slider/layout.xml</file>
+                </elogic_slider>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>

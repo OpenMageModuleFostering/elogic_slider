@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Slider frontend layout
+ *
+ * @author elogic
+ */
+-->
+<layout version="0.1.0">
+    <cms_index_index translate="label">
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>elogic/slider/css/flexslider.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>elogic/slider/css/slider.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>elogic/slider/js/tooltip.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>elogic/slider/js/jquery.flexslider-min.js</name>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="elogic_slider/slider" name="elogic_slider.slider" before="-">
+                <action method="setSliderId">
+                    <sliderId helper="elogic_slider/getHomeSliderId"/>
+                </action>
+                <action method="setTemplate" ifconfig="elogic_slider/slider/active">
+                    <template>elogic/slider.phtml</template>
+                </action>
+            </block>
+        </reference>
+    </cms_index_index>
+</layout>

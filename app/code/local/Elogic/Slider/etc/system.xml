@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Slider Admin configuration section config
+ * @author elogic
+ */
+-->
+
+<config>
+    <tabs>
+        <elogic translate="label">
+            <label>Elogic</label>
+            <sort_order>100</sort_order>
+        </elogic>
+    </tabs>
+    <sections>
+        <elogic_slider translate="label" module="elogic_slider">
+            <label>Elogic Slider</label>
+            <tab>elogic</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>500</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <slider translate="label">
+                    <label>Slider Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <coment>Show slider on home page</coment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+                        <slider_id translate="label">
+                            <label>Homepage slider ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </slider_id>
+                        <!-- <limit translate="label">
+                             <label>Max slides(in slider)</label>
+                             <frontend_type>text</frontend_type>
+                             <comment>Default limit 5</comment>
+                             <sort_order>15</sort_order>
+                             <show_in_default>1</show_in_default>
+                             <show_in_website>1</show_in_website>
+                             <show_in_store>1</show_in_store>
+                         </limit>-->
+                        <speed translate="label">
+                            <label>Speed slider</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>Default 5s. 1s = 1000</comment>
+                            <sort_order>16</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </speed>
+                    </fields>
+                </slider>
+            </groups>
+        </elogic_slider>
+    </sections>
+</config>

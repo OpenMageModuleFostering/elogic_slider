@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Module initial config
+ *
+ * @author elogic
+ */
+-->
+<config>
+    <modules>
+        <Elogic_Slider>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Elogic_Slider>
+    </modules>
+</config>
