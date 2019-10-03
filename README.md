@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 Slider functional allows to add multiple banners, select any area on the banner and add links to this area. Responsive on any mobile an desktop screen and has autoplay.
