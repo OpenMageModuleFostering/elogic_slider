@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Elogic_Slider",
+    "name": "OpenMageModuleFostering\/Elogic_Slider",
     "type": "magento-module",
     "license": "Open-Software-License",
     "homepage": "",
     "description": "Slider functional allows to add multiple banners, select any area on the banner and add links to this area. Responsive on any mobile an desktop screen and has autoplay.",
     "authors": [
-    {
-        "name": "eLogic LLC",
-        "email": "igor@elogic.co"
-    }
-],
+        {
+            "name": "eLogic LLC",
+            "email": "igor@elogic.co"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
